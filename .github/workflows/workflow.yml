@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: upgrade
+      run: pip install --upgrade pip
     - name: install
       run: pip install orjson selenium webdriver-manager
     - name: test-cf
