@@ -16,5 +16,8 @@ jobs:
     - name: install
       run: pip install orjson selenium webdriver-manager
     - name: test-cf
+      env:
+        CODEFORCES_LOGIN: ${{ secrets.CODEFORCES_LOGIN }}
+        CODEFORCES_PASSWORD: ${{ secrets.CODEFORCES_PASSWORD }}
       run: python3 submitter.py codeforces.1844.B.tourist.cpp codeforces B -c 1844 -t OK
       
